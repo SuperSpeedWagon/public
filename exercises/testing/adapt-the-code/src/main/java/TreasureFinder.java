@@ -11,6 +11,9 @@ public class TreasureFinder {
     public TreasureFinder() {
         geolocator = new Geolocator(Precision.FINE);
     }
+    public TreasureFinder(Geolocator geo){
+        geolocator = geo;
+    }
 
     public String getHint(Position treasurePos) {
         if (!geolocator.isLocationServiceRunning()) {
