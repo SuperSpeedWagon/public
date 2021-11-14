@@ -10,12 +10,12 @@ public class App {
         // Update data in the dataStore
         String data = "Some data";
         dataStore.setData(data);
-        dataStore.updateScreen(screen);
-        dataStore.updatePhone(phone);
+        dataStore.update(screen);
+        dataStore.update(phone);
 
         data = "New data";
         dataStore.setData(data);
-        dataStore.updateScreen(screen);
-        dataStore.updatePhone(phone);
+        dataStore.update(screen);
+        dataStore.update(phone);
     }
 }

@@ -17,5 +17,14 @@ public class StepDefinitions {
         }
     }
 
+    @When("one sweater is received")
+    public void receiveSweater(){
+        this.inventory.add(Product.SWEATER);
+    }
+
+    @Then("there are 5 sweaters in the inventory")
+    public void receivedExtraSweater(){
+        inventory.getProductQuantity(Product.SWEATER);
+    }
 
 }

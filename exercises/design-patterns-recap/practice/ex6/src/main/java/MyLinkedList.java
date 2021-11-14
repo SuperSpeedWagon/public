@@ -1,4 +1,8 @@
-public class MyLinkedList<T>{
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class MyLinkedList<T> implements Iterable<T>{
 
     private Element<T> head;
     private Element<T> tail;
@@ -17,4 +21,18 @@ public class MyLinkedList<T>{
         tail = newElement;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer<? super T> action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator<T> spliterator() {
+        return Iterable.super.spliterator();
+    }
 }

@@ -1,5 +1,8 @@
+import java.util.List;
+
 public class DataStore {
     private String data;
+    private List<Updatable> list;
 
     public String getData() {
         return data;
@@ -10,11 +13,8 @@ public class DataStore {
         // Data has changed. Update the UI
     }
 
-    protected void updatePhone(Phone phone) {
-        phone.printToPhone(this.data);
+    protected void update(Updatable u){
+       u.update(this.data);
     }
 
-    protected void updateScreen(Screen screen) {
-        screen.display(this.data);
-    }
 }

@@ -22,8 +22,7 @@ public class PosterTest {
 
     @Test
     public void testFunctionality() {
-        FacebookPoster fb = null;
-        // TODO: instantiate fb
+        NewFacebookPosterToFacebookPosterAdapter fb = new NewFacebookPosterToFacebookPosterAdapter();
 
         fb.postMessage("Hello World!");
         fb.postMessage("Hello world! Still here!");
